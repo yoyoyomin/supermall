@@ -4,18 +4,32 @@
      <home-swiper :banners='banners'></home-swiper>
      <recommend-view :recommends="recommends"></recommend-view>
      <feature-view></feature-view>
+     <tab-control :titles="['流行','新款','精选']"></tab-control>
    <h2>我是主页</h2>
+  <h2>我是主页</h2>
+  <h2>我是主页</h2>
+  <h2>我是主页</h2>
+  <h2>我是主页</h2>
   
   </div>
 </template>
 
 <script>
 
-import navbar from 'components/common/navbar/navbar'
+
 import HomeSwiper from './childHome/homeSwiper'
 import RecommendView from './childHome/RecommendView.vue'
 import FeatureView from './childHome/FeatureView.vue'
+
+import navbar from 'components/common/navbar/navbar'
+import TabControl from '../../components/content/tabControl/TabControl.vue'
+
+
+
+
+
 import {gethomeMultidata} from 'network/home'
+
 
 
 
@@ -31,12 +45,14 @@ export default {
     HomeSwiper,
     RecommendView,
     FeatureView,
+    TabControl,
     
   },
   data(){
     return {
       banners:[],
-      recommends:[]
+      recommends:[],
+
     }
   },
   created(){
@@ -44,6 +60,7 @@ export default {
       console.log(res);
       this.banners = res.data.data.banner.list
       this.recommends = res.data.data.recommend.list
+      
     })
   }
   
