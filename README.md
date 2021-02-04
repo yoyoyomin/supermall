@@ -17,3 +17,9 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+###仓库地址
+https://github.com/yoyoyomin/supermall.git
+
+
